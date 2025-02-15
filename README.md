@@ -17,11 +17,13 @@ The repository is structured into categorized folders based on SQL topics:
 
 ```
 📂 HackerRank-SQL-Solutions
-│-- 📂 Basic Queries
+│-- 📂 Basic Select
+│-- 📂 Advanced Select
 │-- 📂 Aggregation
-│-- 📂 Joins
-│-- 📂 Advanced SQL
-│-- 📂 Alternative Solutions
+│-- 📂 Basic Join
+│-- 📂 Advanced Join
+│-- 📂 Alternative Queries
+
 ```
 Each folder contains **SQL scripts** with the corresponding problem statements and solutions.  
 
