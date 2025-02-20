@@ -1,0 +1,22 @@
+SELECT 
+    CASE 
+        WHEN (SELECT GRADE
+              FROM GRADES
+              WHERE MIN_MARK <= S.MARKS AND MAX_MARK >= S.MARKS) >= 8
+        THEN S.NAME
+        ELSE 'NULL'
+    END AS NAME,
+    (SELECT GRADE
+     FROM GRADES
+     WHERE MIN_MARK <= S.MARKS AND MAX_MARK >= S.MARKS) AS GRADE,
+    S.MARKS
+FROM STUDENTS S
+ORDER BY 
+    GRADE DESC, 
+    CASE 
+        WHEN (SELECT GRADE
+              FROM GRADES
+              WHERE MIN_MARK <= S.MARKS AND MAX_MARK >= S.MARKS) >= 8
+        THEN S.NAME
+        ELSE S.MARKS
+    END ASC;
